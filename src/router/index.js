@@ -1,6 +1,5 @@
 import {createRouter,createWebHistory} from 'vue-router'
 import NotFound from '../views/NotFound'
-import HomePage from "../views/HomePage";
 
 
 const router=createRouter({
@@ -8,15 +7,15 @@ const router=createRouter({
     routes:[
         {
             path:'/',
-            name:'home',
-            component:{
-                users:()=> import('../views/UserPage'),
-                default: HomePage,
+            name:'HomePage',
+            components:{
+                users: ()    => import('../views/UserPage'),
+                default: () => import('../views/HomePage')
             }
         },
         {
             path:'/user',
-            name:'user',
+            name:'UserPage',
             component:()=> import('../views/UserPage'),
             children:[
                 {
