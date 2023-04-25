@@ -39,8 +39,9 @@ const router=createRouter({
             component:()=>import('../views/UserLoginView'),
         },
         {
-            path:'/more-users',
-            redirect:'/user',
+            path:'/stateX',
+            name:'VuexStatePage',
+            component:()=>import('../views/VuexStatePage'),
 
         },
         {
