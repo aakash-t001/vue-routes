@@ -2,6 +2,7 @@
   <div>
     <router-link :to="{ name: 'HomePage' }">Home</router-link> |
     <router-link :to="{ name: 'UserPage' }">User</router-link> |
+    <router-link :to="{ name: 'UserLoginView' }">User Login View</router-link> |
   </div>
   <router-view />
   <router-view name="users"/>

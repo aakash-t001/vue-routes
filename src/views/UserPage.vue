@@ -18,6 +18,12 @@
 </template>
 <script>
 export  default {
+  beforeRouteLeave(){
+    const reply=window.confirm('You Have not views User Details You Can Leave This Page?')
+    if (!reply){
+      return false
+    }
+  },
   data(){
     return{
       users:[
