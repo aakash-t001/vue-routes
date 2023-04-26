@@ -39,6 +39,16 @@ const router=createRouter({
             component:()=>import('../views/UserLoginView'),
         },
         {
+            path:'/click-count',
+            name:'ClickCount',
+            component:()=>import('../views/CounterClick'),
+        },
+        {
+            path:'/hover-count',
+            name:'HoverCount',
+            component:()=>import('../views/CounterHover'),
+        },
+        {
             path:'/stateX',
             name:'VuexStatePage',
             component:()=>import('../views/VuexStatePage'),

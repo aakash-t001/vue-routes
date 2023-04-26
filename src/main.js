@@ -10,8 +10,19 @@ const store = createStore({
         }
     },
     mutations:{
-        increment(state){
-            state.counter++
+        increment(state,payload){
+            state.counter=state.counter+payload
+        }
+    },
+    getters:{
+        getCounter(state){
+            return state.counter
+        },
+        getNormalizedCounter(state,getter){
+            if(getter.getCounter >= 50){
+                return 50
+            }
+            return getter.getCounter
         }
     }
 })
